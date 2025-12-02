@@ -1,0 +1,12 @@
+ES Fino 1 sapevo fare
+13)Modificato i gfile con nano, però non so come fare i test su tutti i file con shell "interatitiva, non interattiva" come bash 
+
+14)
+mi osno spostato ella cartella usr/bin
+poi ho fatto:
+ls -alh
+attivazione flag -a + -l + -h
+
+15)
+man ls
+
