@@ -1,0 +1,1 @@
+for NAME in 'ls -1';  do echo "file is ${NAME}"; ls -ld ${NAME} done
