@@ -1,8 +1,9 @@
 NUMERO=$1
 RISULTATO=$2
-if  (($NUMERO>=1)); then
-	((RISULTATO=NUMERO*RISULTATO))
-	(( NUMERO=NUMERO-1))
-        ./fattoriale1.sh RISULTATO NUMERO
+if  (($NUMERO==1)); then
+	echo "$RISULTATO";
 else
-	echo "$RISULTATO"
+	((RISULTATO=NUMERO*RISULTATO))
+        (( NUMERO=NUMERO-1))
+        ./fattoriale1.sh $NUMERO $RISULTATO
+fi
