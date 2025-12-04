@@ -1,0 +1,7 @@
+I=1
+TOT= ls
+for ((CONTATORE<$@)) ; do
+	echo "file is ${!I} "
+	ls -l ${!I}
+	((CONTATORE=CONTATORE+1))
+done
