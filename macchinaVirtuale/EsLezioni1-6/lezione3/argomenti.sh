@@ -1,10 +1,10 @@
 #ciclo tutto
 #separo pari dai dispari
-
+#devo adattare 
 pari=""
 dispari=""
 contatore=1
-for i in $@; do
+for i in "$@"; do
 	if ((contatore%2==0)); then
 		pari="${pari} ${i}"
 	else dispari="${dispari} ${i}"
