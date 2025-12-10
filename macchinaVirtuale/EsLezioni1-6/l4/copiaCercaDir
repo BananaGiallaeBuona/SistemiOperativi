@@ -1,0 +1,12 @@
+#!/bin/bash
+#PENSAVO DI NON POTER AUSARE LO STESSO IF, INVECE LA DIFFERENZA È L'OBBLIGO DI UTILIZZO DI  -a O -o
+for file in ` find /usr/include/* -maxdepth 1`; do 
+	if [ -d ${file} ]; then
+		if [ -r ${file} ]; then
+			if [ ${file} -nt /usr/include/stdio.h ]; then
+				echo  /usr/include/${file}
+			fi
+		fi
+	fi
+done
+
