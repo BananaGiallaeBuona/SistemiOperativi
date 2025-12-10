@@ -2,7 +2,7 @@
 exec {FD}<miofileNoNL.txt
 contatore=0
 if (($? == 0)); then
-	while read -u ${FD} -r A; do
+	while read -u ${FD} -n 1 -r A; do
 		echo ${A}
 	done;
 	exec {FD}>&-
