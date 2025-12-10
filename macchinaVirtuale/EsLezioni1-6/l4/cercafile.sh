@@ -1,6 +1,9 @@
 #!/bin/bash
-for file in `find /usr/include/*`; do
-	if [[ $file && [[ #(/usr/include/${file}) -gt 23 || #(/usr/include/${file}) -lt 18 ]] ]]; do
-		echo /usr/include/${file}
-	fi
+for car in {c..g}; do 
+	for file in `/usr/include/?${car}*`; do
+		path=/usr/include/${file}
+		if [[${#path} -gt 23 || ${#path} -lt 18 ]]; then
+			echo ${path}
+		fi
+	done
 done
