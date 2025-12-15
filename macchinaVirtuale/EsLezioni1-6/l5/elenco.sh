@@ -4,13 +4,16 @@
 #contare lunghezza nome 
 #numero elementi non directory
 #stampare
-find ./ -mindepth 1 >> log.txt
-while  cat log.txt|read nome; do
-	if [[ find -d ${nome} -eq  0 ]]; then
-		((cartelle=cartelle+ #nome)) 
+cartelle=0
+file=0
+
+for namw in `ls ./`; do
+	if [[ -d "$nome" ]]; then
+		num=${#nome}
+		((cartelle=cartelle+num)) 
 	else
 		((file++))
-	fi;
+	fi
 done
 
 echo "lunghezza cartelle ${cartelle}"
