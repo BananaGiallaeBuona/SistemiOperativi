@@ -1,5 +1,3 @@
-while true; do
-	read prima seconda terza quarta
-	echo "status della 'read' exit N"
+while read prima seconda terza quarta; do
 	echo ${quarta} ${terza}
 done
