@@ -1,0 +1,31 @@
+in tutti questi faccio riferimento ai contenuti come se fossero variabili, non con $N
+
+DATI DENTRO SCRIPT 
+while read v1 v2;
+	contenuto
+done << EOF
+	divano1 200 83 105
+	Divano2 170 85 115
+	divaNo3 185 65 99
+	divano4 170 85 115
+	divanO5 220 70 145
+EOF
+
+CHIAMO FILE DA DENTRO 
+while read v1 v2;
+	contenuto
+done < ./dati.txt #./dati.txt serve per il percorso, non perchè è un comando
+
+
+RISCRIVO IN UN FILE DI LOG(gli echo verrano salvati in log.txt)
+./analize.sh > log.txt
+
+AGGIUNGO IN UN FILE DI LOG(gli echo verrano salvati in log.txt, sotto al contnuto già presente)
+./analize.sh >> log.txt
+
+PASSO LO STDOUT DI UN COMANDO ALLO STDIN DI UNO SCRIPT
+
+`cat divani.txt` | ./divani.sh 
+while read v1 v2;
+	contenuto
+done
