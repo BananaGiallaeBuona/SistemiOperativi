@@ -15,7 +15,7 @@ ALTMAX=$2
 # ed usatelo opportunamente.
 #IO
 for nome larghezza altezza profondita in `cat ./divani.txt`; do
-	if [[$largezza -ge $LARGMIN && $altezza -le $ALTMAX]]; then
+	if ((largezza >= LARGMIN && altezza <= ALTMAX)); then
 		echo  $nome $larghezza $altezza $profondita
 	fi
 done
