@@ -2,13 +2,18 @@
 precedente=""
 contatore=0
 while read nome cognome importo data; do
-	echo $importo
-	if [[ $importo ==  $precedente ]]; then
+	if [[ -z $precedente ]];then
+        	contatore=1
+		precedente="${importo}"
+	elif [[ $importo ==  $precedente ]]; then
 		((contatore++))
 	else 
-		echo "${importo} ${contatore}"
-		contatore=0
+		echo "${precedente} ${contatore}"
+		contatore=1
 	fi
 	precedente=$importo
-done 
-echo "ultimo valutratyo ${precedente}"
+done
+#qui, visto che io considero le faccio la stampa soltanto se c'è un cambio, l'ultimo gruppo viene ignorato e non stampato perché non c'è un cambio quindi devo fare una condizione a parte per far sì che venga stampato anche se successivamente non c'è nessuno
+if [[ -n $precedente ]]; then
+	echo "${precedente} ${contatore}"
+fi
