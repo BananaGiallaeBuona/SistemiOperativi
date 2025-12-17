@@ -13,9 +13,8 @@ ALTMAX=$2
 # Da qui in poi aggiungete quello che serve.
 # Leggete il contenuto del file ./divani.txt
 # ed usatelo opportunamente.
-#IO
-for nome larghezza altezza profondita in `cat ./divani.txt`; do
-	if ((largezza >= LARGMIN && altezza <= ALTMAX)); then
-		echo  $nome $larghezza $altezza $profondita
+while read nome larghezza altezza profondita; do
+	if ((larghezza >= LARGMIN && altezza <= ALTMAX)); then
+		echo $nome $larghezza $altezza $profondita
 	fi
-done
+done < ./divani.txt
