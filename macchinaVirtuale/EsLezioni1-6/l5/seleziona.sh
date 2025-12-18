@@ -1,6 +1,6 @@
 contatore=0
 while read RIGA; do
-	if grep 'a' $RIGA; then
+	if echo "$RIGA" | grep -q 'a'; then
 		#aggiunta=`wc -m $RIGA`
 		aggiunta=${#RIGA}   
 		((contatore=contatore+aggiunta))
