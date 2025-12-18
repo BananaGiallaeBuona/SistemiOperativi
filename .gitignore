@@ -1,0 +1,16 @@
+# macOS
+.DS_Store
+
+
+# File di swap editor
+*.swp
+*.swo
+
+# Archivi compressi
+*.tgz
+*.zip
+
+# Cartelle di output / temporanee (se non fanno parte della consegna)
+macchinaVirtuale/**/.DS_Store
+macchinaVirtuale/simulazioneEsameLab/**/.DS_Store
+slide/.DS_Store
