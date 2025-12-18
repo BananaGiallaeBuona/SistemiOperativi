@@ -1,4 +1,4 @@
-contatore=44
+contatore=47
 #45
 sed -n '3,5p' /usr/include/stdio.h
 ((contatore++))
@@ -22,3 +22,19 @@ echo " ${primo}"
 if [ $? -eq 0 ]; then 
         echo "${contatore} was a good job!"
 fi
+
+#48
+read primo  &> /dev/null
+((contatore++))
+if [ $? -eq 0 ]; then 
+        echo "${contatore} was a good job!"
+fi
+
+#49
+while read primo; do echo $primo | echo ${#primo}  ; done
+((contatore++))
+if [ $? -eq 0 ]; then 
+        echo "${contatore} was a good job!"
+fi
+
+#50
