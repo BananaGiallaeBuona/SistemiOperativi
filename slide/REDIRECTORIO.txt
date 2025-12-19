@@ -28,4 +28,4 @@ PASSO LO STDOUT DI UN COMANDO ALLO STDIN DI UNO SCRIPT
 `cat divani.txt` | ./divani.sh 
 while read v1 v2;
 	contenuto
-done
+done 
