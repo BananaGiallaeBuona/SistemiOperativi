@@ -1,10 +1,8 @@
 i=1
-while pt=`echo "${PATH}" | cut  --delimiter=':' -f $i`; do 
-	echo "${pt} ${#pat}"
+len= `echo "${PATH}" | awk -F':' '{ print NF }'`
+while  ((i <= len)); do
+	pt=`echo "${PATH}" | cut  --delimiter=':' -f $i`
+	echo "${pt} ${#pt}"
 	((i++))
-done
 
-echo 2
-for pat in `echo "${PATH}" | cut  --delimiter=':' -f 1-`; do 
-	echo "${pat} ${#pat}"
 done
