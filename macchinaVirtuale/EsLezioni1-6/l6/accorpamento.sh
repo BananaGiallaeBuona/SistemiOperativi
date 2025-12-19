@@ -14,7 +14,7 @@ if [ $? -eq 0 ]; then
 fi
 
 #47
-read primo \n
+read primo 
 read secondo
 echo ${secondo} 
 echo " ${primo}"
@@ -45,5 +45,5 @@ tail -4 /usr/include/stdio.h | cut -c 1-3 ) |
 (
 read primo; read secondo; echo ${secondo} ; echo " ${primo}"; 
 read primo  &> /dev/null
-while read primo; do echo $primo; done
+while read r; do echo ${#r}; done
 )
