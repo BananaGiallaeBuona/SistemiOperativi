@@ -1,0 +1,6 @@
+ciao mondo come va
+prima seconda terza
+awk bash shell
+una sola
+* ioio
+eee
